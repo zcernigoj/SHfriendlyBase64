@@ -13,11 +13,15 @@
 <body>
   <h1>SH friendly Base64</h1>
 
-  <button id="encode" onclick="encodeBtn()">Encode</button>
-  <button id="decode" onclick="decodeBtn()">Decode</button>
-  <button id="trim" onclick="trimButton()">Trim</button>
+  <button id="encode" onclick="encodeBtn()">Encode with b64EncodeUnicode</button>
+  <button id="decode" onclick="decodeBtn()">Decode with b64DecodeUnicode</button>
+  <br />
+  <button id="encodeBTOA" onclick="encodeWithBTOA()">Encode with JS btoa()</button>
+  <button id="decodeATOB" onclick="decodeWithATOB()">Decode with JS atob()</button>
+  <br />
+  <button id="trim" onclick="trimButton()">Trim spaces at the end of lines</button>
+  <br />
   <button id="copyResToInput" onclick="copyResultToInput()">Copy result to input</button>
-  <button id="encodeDefault" onclick="encodeWithDefault()">Encode with JS btoa()</button>
   <br />
 
   <div id="container" style="display: flex; flex-direction: row; align-items: center;">
@@ -46,11 +50,14 @@
     function trimButton() {
       document.getElementById('result').value = removeTrailingSpaces(document.getElementById('input').value);
     }
-    function copyResultToInput(){
+    function copyResultToInput() {
       document.getElementById('input').value = document.getElementById('result').value;
     }
-    function encodeWithDefault(){
+    function encodeWithBTOA() {
       document.getElementById('result').value = window.btoa(document.getElementById('input').value);
+    }
+    function decodeWithATOB() {
+      document.getElementById('result').value = window.atob(document.getElementById('input').value);
     }
   </script>
 
