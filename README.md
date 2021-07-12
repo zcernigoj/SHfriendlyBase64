@@ -1,0 +1,2 @@
+# SHfriendlyBase64
+

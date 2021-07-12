@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SH friendly Base64</title>
+  <script src="./shfriendlybase64.js"></script>
+</head>
+
+<body>
+  <h1>SH friendly Base64</h1>
+
+  <button id="encode" onclick="encodeBtn()">Encode</button>
+  <button id="decode" onclick="decodeBtn()">Decode</button>
+  <br />
+
+  <div id="container" style="display: flex; flex-direction: row; align-items: center;">
+    <div>
+      <h3>Input:</h3>
+      <textarea name="input" id="input" cols="80" rows="40"></textarea>
+    </div>
+
+    <div>
+      <h1>=></h1>
+    </div>
+
+    <div>
+      <h3>Result:</h3>
+      <textarea name="result" id="result" cols="80" rows="40" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    function encodeBtn() {
+      document.getElementById('result').value = b64EncodeUnicode(document.getElementById('input').value);
+    }
+    function decodeBtn() {
+      document.getElementById('result').value = b64DecodeUnicode(document.getElementById('input').value);
+    }
+  </script>
+
+</body>
+
+</html>
