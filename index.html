@@ -13,12 +13,17 @@
 <body>
   <h1>SH friendly Base64</h1>
 
-  <button id="encode" onclick="encodeBtn()">Encode with b64EncodeUnicode</button>
-  <button id="decode" onclick="decodeBtn()">Decode with b64DecodeUnicode</button>
+  Encoding / decoding without <a href="b64DecodeUnicode">the "Unicode problem"</a>:
   <br />
-  <button id="encodeBTOA" onclick="encodeWithBTOA()">Encode with JS btoa()</button>
-  <button id="decodeATOB" onclick="decodeWithATOB()">Decode with JS atob()</button>
+  <button id="encode" onclick="encodeBtn()">Encode</button>
+  <button id="decode" onclick="decodeBtn()">Decode</button>
   <br />
+  Encoding / decoding with Javascript's <code>btoa()</code> and <code>atob()</code>
+  <br />
+  <button id="encodeBTOA" onclick="encodeWithBTOA()">Encode</button>
+  <button id="decodeATOB" onclick="decodeWithATOB()">Decode</button>
+  <br />
+
   <button id="trim" onclick="trimButton()">Trim spaces at the end of lines</button>
   <br />
   <button id="copyResToInput" onclick="copyResultToInput()">Copy result to input</button>
