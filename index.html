@@ -29,6 +29,13 @@
   </p>
 
   <p>
+    URL encoding and decoding
+    <br />
+    <button id="encodeBTOA" onclick="encodeURLBtn()">Encode</button>
+    <button id="decodeATOB" onclick="decodeURLBtn()">Decode</button>
+  </p>
+
+  <p>
     <button id="trim" onclick="trimButton()">Trim spaces at the end of lines</button>
   </p>
   <p>
@@ -69,6 +76,12 @@
     }
     function decodeWithATOB() {
       document.getElementById('result').value = window.atob(document.getElementById('input').value);
+    }
+    function encodeURLBtn() {
+      document.getElementById('result').value = encodeURIComponent(document.getElementById('input').value);
+    }
+    function decodeURLBtn() {
+      document.getElementById('result').value = decodeURIComponent(document.getElementById('input').value);
     }
   </script>
 
