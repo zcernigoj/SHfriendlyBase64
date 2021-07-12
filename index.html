@@ -17,6 +17,7 @@
   <button id="decode" onclick="decodeBtn()">Decode</button>
   <button id="trim" onclick="trimButton()">Trim</button>
   <button id="copyResToInput" onclick="copyResultToInput()">Copy result to input</button>
+  <button id="encodeDefault" onclick="encodeWithDefault()">Encode with JS btoa()</button>
   <br />
 
   <div id="container" style="display: flex; flex-direction: row; align-items: center;">
@@ -47,6 +48,9 @@
     }
     function copyResultToInput(){
       document.getElementById('input').value = document.getElementById('result').value;
+    }
+    function encodeWithDefault(){
+      document.getElementById('result').value = window.btoa(document.getElementById('input').value);
     }
   </script>
 
