@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SH friendly Base64</title>
   <script src="./shfriendlybase64.js"></script>
+  <script src="stringManipulation.js"></script>
 </head>
 
 <body>
@@ -14,6 +15,8 @@
 
   <button id="encode" onclick="encodeBtn()">Encode</button>
   <button id="decode" onclick="decodeBtn()">Decode</button>
+  <button id="trim" onclick="trimButton()">Trim</button>
+  <button id="copyResToInput" onclick="copyResultToInput()">Copy result to input</button>
   <br />
 
   <div id="container" style="display: flex; flex-direction: row; align-items: center;">
@@ -38,6 +41,12 @@
     }
     function decodeBtn() {
       document.getElementById('result').value = b64DecodeUnicode(document.getElementById('input').value);
+    }
+    function trimButton() {
+      document.getElementById('result').value = removeTrailingSpaces(document.getElementById('input').value);
+    }
+    function copyResultToInput(){
+      document.getElementById('input').value = document.getElementById('result').value;
     }
   </script>
 
