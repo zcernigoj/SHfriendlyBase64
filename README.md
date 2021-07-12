@@ -15,3 +15,8 @@ This project contains
 
 
 Web interface available at https://zcernigoj.github.io/SHfriendlyBase64/
+The web interface contains:
+- encoding and decoding with solved ["Unicode problem"](https://developer.mozilla.org/en-US/docs/Glossary/Base64#the_unicode_problem)
+- encoding and decoding with `btoa()` and `atob()`
+- URL encoding and decoding
+- trimming the trailing spaces in a multi-line string 
